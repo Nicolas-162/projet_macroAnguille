@@ -1,0 +1,123 @@
+:root {
+	/* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+/* button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.loading-div {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.loading-text {
+	font-size: larger;
+	animation: opacity-animation 1.5s infinite;
+}
+
+.spinning-loader {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	border: 3px solid;
+	border-color: #007222 #005118 transparent transparent;
+	box-sizing: border-box;
+	animation: rotationFront 1s linear infinite;
+}
+
+.spinning-loader::after,
+.spinning-loader::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border: 3px solid;
+	border-color: transparent transparent #0dff00 #00ff48;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: rotationBack 0.5s linear infinite;
+	transform-origin: center center;
+}
+
+.spinning-loader::before {
+	width: 32px;
+	height: 32px;
+	border-color: #007222 #005118 transparent transparent;
+	animation: rotationFront 1.5s linear infinite;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
