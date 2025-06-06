@@ -47,7 +47,13 @@ The built project will be by default placed in the the « dist » folder.
 
 ## Demo
 
-Open any browser and go to this link: http://localhost/macroAnguille
+-   Use the the dist folder placed in the SharePoint.
+-   Open any browser and go to this link: http://localhost/macroAnguille
+
+## Documentation
+
+-   Use the following link to head to the file where all is explained about what is done and what needs to be done:
+    https://github.com/Nicolas-162/projet_macroAnguille/blob/main/info.md
 
 ## Useful links
 
